@@ -1,0 +1,74 @@
+.wrapper {
+	width: 100%;
+	position: relative;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	overflow: hidden;
+	
+}
+
+.letters {
+	width: 100%;
+	height: 100vh;
+	background-color: #000;
+}
+
+.letters__list {
+	width: 100%;
+	list-style: none;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%)
+}
+
+.letters__item {
+	display: inline-block;
+	width: 75px;
+	height: 55px;
+	margin: 5px;
+	border: 3px solid #fff;
+	border-radius: 4px;
+	background-color: fade-out(#000, .8);
+	transition: all .09s;
+}
+
+.playing {
+	border: 3px solid #f9e05b;
+	box-shadow: 0 0 10px (#f9e05b);
+	transform: scale(1.1);
+}
+
+.letters__link {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	position: relative;
+}
+
+.link__text-wrap {
+	height: 35px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+.letters__link-name,
+.letters__link-disc {
+	display: block;
+}
+
+.letters__link-name {
+	color: #fff;
+}
+
+.letters__link-disc {
+	font-size: 12px;
+	color: #d2b51a;
+}

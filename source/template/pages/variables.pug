@@ -1,0 +1,17 @@
+extends ../_template-js
+
+block variables
+	- var title = 'Variables'
+
+block content
+	section.variables
+		h2 Update CSS Variables with <span class='h1'>JS</span>
+
+		.controls
+			label(for="") Spacing
+			input.variables__input(type="range" name="spacing" min="10" max="200" value="10" data-sizing="px")
+			label(for="") Blur
+			input.variables__input(type="range" name="blur" min="0" max="25" value="10" data-sizing="px")
+			label(for="") Base
+			input.variables__input(type="color" name="base" value="#ffc600")
+		img.variables__img(src="http://unsplash.it/800/500?imgage=899")

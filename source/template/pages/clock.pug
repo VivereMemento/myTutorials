@@ -1,0 +1,12 @@
+extends ../_template-js
+
+block variables
+	- var title = 'Clock'
+
+block content
+	section.clock-wrap
+		.clock
+			.clock__face
+				.hand.hour-hand
+				.hand.min-hand
+				.hand.sec-hand

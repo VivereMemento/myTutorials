@@ -1,0 +1,40 @@
+extends ../_template-js
+block variables
+	- var title = 'Drums'
+
+block content
+	section.letters
+		-
+			var letters = [
+					{name: "A", disc: "clap", data: "65"},
+					{name: "S", disc: "hihat", data: "83"},
+					{name: "D", disc: "kick", data: "68"},
+					{name: "F", disc: "openhat", data: "70"},
+					{name: "G", disc: "boom", data: "71"},
+					{name: "H", disc: "ride", data: "72"},
+					{name: "J", disc: "snare", data: "74"},
+					{name: "K", disc: "tom", data: "75"},
+					{name: "L", disc: "tink", data: "76"}
+				]
+
+		ul.letters__list
+			each letter in letters
+				li.letters__item.key(data-key="" + letter.data)
+					a.letters__link(href="#")
+						div.link__text-wrap
+							span.letters__link-name #{letter.name}
+							span.letters__link-disc #{letter.disc}
+		-
+			var sounds = [
+					{src: "./assets/sounds/clap.wav", data: "65"},
+					{src: "./assets/sounds/hihat.wav", data: "83"},
+					{src: "./assets/sounds/kick.wav", data: "68"},
+					{src: "./assets/sounds/openhat.wav", data: "70"},
+					{src: "./assets/sounds/boom.wav", data: "71"},
+					{src: "./assets/sounds/ride.wav", data: "72"},
+					{src: "./assets/sounds/snare.wav", data: "74"},
+					{src: "./assets/sounds/tom.wav", data: "75"},
+					{src: "./assets/sounds/tink.wav", data: "76"}
+				]
+		each sound in sounds
+			audio(data-key="" + sound.data, src="" + sound.src)
