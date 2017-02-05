@@ -1,0 +1,24 @@
+extends ../_template-js
+
+block variables
+	- var title = 'Cardio'
+	- var tempName = 'Cardio'
+
+block content
+	section.cardio
+
+		-
+			var panels = [
+				{index: "1", text: ["Hey", "Let's", "Dance"]},
+				{index: "2", text: ["Give", "Take", "Receive"]},
+				{index: "3", text: ["Experience", "It", "Today"]},
+				{index: "4", text: ["Give", "All", "You Can"]},
+				{index: "5", text: ["Life", "in", "motion"]},
+			]
+
+		.panels
+			each item in panels
+				div(class="panel panel" + item.index)
+					each text in item.text
+						p.panel__text #{text}
+		

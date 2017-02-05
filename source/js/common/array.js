@@ -92,12 +92,39 @@ const de = links
 
 const alpha = people.sort((lastOne, nextOne) => {
 
-	const [aLast, aFirst] = lastOne.split(', ');
-	const [bLast, bFirst] = nextOne.split(', ');
+	const [aLast, aFirst] = lastOne.split();
+	const [bLast, bFirst] = nextOne.split();
 	return aLast > bLast ? 1 : -1;
 });
 
 console.log(alpha);
+
+// ********** Method Split() *********** //
+function splitString(stringToSplit, separator) {
+  var arrayOfStrings = stringToSplit.split(separator);
+
+  const wordsArray = Array.from(arrayOfStrings);
+
+  console.log(wordsArray);
+
+  const text = wordsArray.reduce((a, b) => a + ' ' + b);
+  console.log(text);
+
+  // console.log('Оригинальная строка: "' + stringToSplit + '"');
+  // console.log('Разделитель: "' + separator + '"');
+  // console.log('Массив содержит ' + arrayOfStrings.length + ' элементов: ' + arrayOfStrings.join(' / '));
+}
+
+// Строчка из «Бури» Шекспира. Перевод Миxаила Донского.
+var tempestString = 'И как хорош тот новый мир, где есть такие люди!';
+var monthString = 'Янв,Фев,Мар,Апр,Май,Июн,Июл,Авг,Сен,Окт,Ноя,Дек';
+
+var space = ' ';
+var comma = ',';
+
+splitString(tempestString, space);
+// splitString(tempestString);
+// splitString(monthString, space);
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
