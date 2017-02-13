@@ -1,4 +1,4 @@
-#Учебная сборка Loftschool (выпускной проект №1) 
+#Wes Bos (JavaScript course) 
 
 Stack:
  - Gulp 4.0
