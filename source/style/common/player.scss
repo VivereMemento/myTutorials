@@ -1,0 +1,17 @@
+.player {
+	width: 640px;
+}
+
+.progress {
+	height: 5px;
+	background: rgba(255, 255, 255, 0.53);
+	display: flex;
+
+	&__filled {
+		width: 0%;
+		height: 100%;
+		background: red;
+		flex: 0;
+		flex-basis: 0%;
+	}
+}

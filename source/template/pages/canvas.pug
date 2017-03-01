@@ -1,0 +1,13 @@
+extends ../_template-js
+
+block variables
+	- var title = 'Canvas'
+
+block content
+	section.canvas
+		.colors
+			label(for="") Base
+			input.canvas__input(type="color" name="base" value="#ffc600")
+			a.trig(href="#") Hello
+			a.trig(href="#") Hello
+		canvas#draw(width="800" height="800")

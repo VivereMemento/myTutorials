@@ -1,0 +1,16 @@
+extends ../_template-js
+block variables
+	- var title = 'Player'
+
+block content
+	section.play
+		.player
+			video.player__video.viewer(src="assets/img/BigBuckBunny.mp4" autoplay)
+			.player__controls
+				.progress
+					.progress__filled
+				button.player__button.toggle(title="Toggle Play") play
+				input.player__slider(type="range" name="volume" min="0" max="1" step="0.05" value="1")
+				input.player__slider(type="range" name="playbackRate" min="0.5" max="2" step="0.1" value="1")
+				button.payer__button(data-skip="-10") << 10s
+				button.payer__button(data-skip="25") 25s >>

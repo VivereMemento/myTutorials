@@ -1,0 +1,25 @@
+extends ../_template-js
+
+block variables
+	- var title = 'checkboxList'
+
+block content
+	section.checkboxList
+		-
+			var items = [
+				'This is an inbox layout',
+				'Check one item',
+				'Hold down your Shift key',
+				'Check a lower item',
+				'Everything inbetween should also be set to checked',
+				'Try do it with out any libraries',
+				'Just regular JavaScript',
+				'Good Luck!',
+				`Don't forget to tweet your result!`
+			]
+
+		ul.inbox
+			each item in items
+				li.inbox__item
+					input.inbox__input(type="checkbox")
+					span.inbox__text #{item}

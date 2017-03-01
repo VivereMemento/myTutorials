@@ -1,0 +1,14 @@
+extends ../_template-js
+
+block variables
+	- var title = 'Live Search'
+	- var tempName = 'Live Search'
+
+block content
+	section.ajax
+		#searcharea
+			label(for="search") live search
+			p.searchare__text Enter the name or info about a city
+			input#search(type="search" name="search" placeholder="name or info")
+			a.searchBtn(href="#") Enter
+		#update

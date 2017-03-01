@@ -5,7 +5,15 @@ var clock = (function () {
       };
 
   var _setUpListners = function () {
-			
+			    inputs.forEach(function(input) {
+            input.addEventListener('change', handleUpdate);
+          });
+        //inputs.forEach(input => input.addEventListener('change', handleUpdate));
+
+          inputs.forEach(function(input) {
+            input.addEventListener('mousemove', handleUpdate);
+          });
+        // inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
       }
 
   const inputs = document.querySelectorAll('.controls input');
@@ -17,16 +25,6 @@ var clock = (function () {
     // console.log(this.dataset);
     // console.log(this.value);
   }
-
-  inputs.forEach(function(input) {
-    input.addEventListener('change', handleUpdate);
-  });
-//inputs.forEach(input => input.addEventListener('change', handleUpdate));
-
-  inputs.forEach(function(input) {
-    input.addEventListener('mousemove', handleUpdate);
-  });
-// inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
       
   return {
     init: init
