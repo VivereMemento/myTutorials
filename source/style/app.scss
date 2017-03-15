@@ -1,3 +1,10 @@
+// ****** COMMON CLASSES ****** //
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
 @import 'common/_mixins';
 @import 'common/greating';
 
@@ -9,6 +16,6 @@
 @import 'common/canvas';
 @import 'common/checkboxList';
 @import 'common/player';
+@import 'common/slideInOnScroll';
 
 @import 'common/css';
-

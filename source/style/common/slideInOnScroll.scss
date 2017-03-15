@@ -1,0 +1,21 @@
+.left {
+  float: left;
+  transform: translateX(-180px) scale(0.95);
+  transition: all .3s;
+}
+
+.right {
+  float: right;
+  transform: translateX(180px) scale(0.95);
+  transition: all .3s;
+}
+
+.onscroll__img {
+  margin: 10px;
+  opacity: 0;
+
+  &.active {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
